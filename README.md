@@ -7,7 +7,7 @@ Sub GetRecipientsInSelectedItem()
     Dim Recipients As Outlook.Recipients
     Dim Index As Integer
     
-    Set Explorer = application.ActiveExplorer
+    Set Explorer = Application.ActiveExplorer
     Set Selection = Explorer.Selection
     Set Recipients = Selection.Item(1).Recipients
     

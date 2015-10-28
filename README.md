@@ -16,3 +16,26 @@ Sub GetRecipientsInSelectedItem()
     Next Index
 End Sub
 ```
+
+## Send a task
+```
+Sub SendTask(name)
+    Dim TaskItem As Outlook.TaskItem
+    Dim TaskItemRecipients As Outlook.Recipients
+    Dim TaskItemRecipient As Outlook.recipient
+    
+    Set TaskItem = Application.CreateItem(Outlook.OlItemType.olTaskItem)
+    TaskItem.Assign
+    Set TaskItemRecipients = TaskItem.Recipients
+    Set TaskItemRecipient = TaskItemRecipients.Add(name)
+    TaskItemRecipient.Resolve
+    
+    If (TaskItemRecipient.Resolved) Then
+        TaskItem.Subject = "Test"
+        TaskItem.Body = "Body"
+        TaskItem.StartDate = Now
+        TaskItem.DueDate = Now + 1
+        TaskItem.Send
+    End If
+End Sub
+```

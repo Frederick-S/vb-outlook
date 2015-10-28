@@ -35,6 +35,7 @@ Sub SendTask(name)
         TaskItem.Body = "Body"
         TaskItem.StartDate = Now
         TaskItem.DueDate = Now + 1
+        TaskItem.Display
         TaskItem.Send
     End If
 End Sub

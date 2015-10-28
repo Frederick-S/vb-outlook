@@ -63,4 +63,4 @@ Private Sub Application_ItemContextMenuDisplay(ByVal CommandBar As Office.Comman
 End Sub
 ```
 
-Put the code in `ThisOutlookSession`.
+Put the code in `ThisOutlookSession`. [Source](http://www.experts-exchange.com/Software/Office_Productivity/Groupware/Outlook/Q_24825855.html).
